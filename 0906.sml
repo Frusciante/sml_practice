@@ -1,5 +1,6 @@
 fun estaIncluso (_, []) = false |
-    estaIncluso (val : 'a, first::li : 'a list) =
-        val = first orelse estaIncluso (val, li);
+    estaIncluso (v : ''a, first::li : ''a list) =
+        v = first orelse estaIncluso (v, li);
 
-estaIncluso (1, [1, 2, 3]);
+val result1 = estaIncluso (1, [1, 2, 3]); (* result1 will be true *)
+val result2 = estaIncluso (4, [1, 2, 3]); (* result2 will be false *)
